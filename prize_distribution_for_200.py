@@ -8,7 +8,7 @@ import numpy as np
 
 entryAmount = 50
 
-numOfParticipants = 500
+numOfParticipants = 200
 rankArray = [i for i in range(1, numOfParticipants+1)]
 
 
@@ -47,13 +47,13 @@ for i, rank in enumerate(npRankArray):
         print("Your reward is:   " + str(yourReward))
 
     if( rank == 2):
-        yourReward = (2.5/100)*pricePoolToBeDistributed
+        yourReward = (7/100)*pricePoolToBeDistributed
         totalPrizePoolRemaining = totalPrizePoolRemaining - yourReward
         print(f"person: {i}, rank: {rank}")
         print("Your reward is:   " + str(yourReward))
 
     if( rank == 3):
-        yourReward = (1/100)*pricePoolToBeDistributed
+        yourReward = (2.5/100)*pricePoolToBeDistributed
         totalPrizePoolRemaining = totalPrizePoolRemaining - yourReward
         print(f"person: {i}, rank: {rank}")
         print("Your reward is:   " + str(yourReward))
@@ -62,19 +62,13 @@ for i, rank in enumerate(npRankArray):
     #     yourReward = 
 
     if (rank >3 and rank < 11):
-        yourReward = (0.5/100)*pricePoolToBeDistributed
+        yourReward = (1/100)*pricePoolToBeDistributed
         totalPrizePoolRemaining = totalPrizePoolRemaining - yourReward
         print(f"person: {i}, rank: {rank}")
         print("Your reward is:   " + str(yourReward))
 
 
-    if (rank >=11 and rank < 26):
-        yourReward = (0.35/100)*pricePoolToBeDistributed
-        totalPrizePoolRemaining = totalPrizePoolRemaining - yourReward
-        print(f"person: {i}, rank: {rank}")
-        print("Your reward is:   " + str(yourReward))
-
-    if(rank >=26 and rank < percentile_50):
+    if(rank >=11 and rank < percentile_50):
         yourReward = entryAmount
         totalPrizePoolRemaining = totalPrizePoolRemaining - entryAmount
         print(f"person: {i}, rank: {rank}")
